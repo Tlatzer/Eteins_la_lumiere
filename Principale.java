@@ -16,13 +16,14 @@ public class Principale{
   }
 }
 
-class Fenetre extends JFrame{
+class Fenetre extends JFrame implements ActionListener{
   /* Attributs */
   private JButton configurer, aleatoire, jouer, quitter;
   private JPanel grille, menu;
   private int nb_dep = 0;
   private JTextField score;
   private Container fenetre;
+  private int selectX, selectY;
 
   /* Constructeur */
   public Fenetre(String titre){
@@ -66,6 +67,20 @@ class Fenetre extends JFrame{
     fenetre.setLayout(new BorderLayout());
     fenetre.add(grille, BorderLayout.CENTER);
     fenetre.add(menu, BorderLayout.WEST);
+  }
+
+
+  public void actionPerformed(ActionEvent e){
+    String b;
+
+    b = ((JButton) e.getSource()).getText();
+    switch (b){
+      case "Configurer":
+      case "Aleatoire":
+      case "Jouer":
+      case "Quitter":
+    }
+    score.setText ("Nb Deplacements : " + nb_dep);
   }
 
 }
