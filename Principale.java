@@ -21,7 +21,7 @@ class Fenetre extends JFrame implements ActionListener{
   private JButton configurer, aleatoire, jouer, quitter;
   private JPanel grille, menu;
   private int nb_dep = 0;
-  private JTextField score;
+  private JLabel score;
   private Container fenetre;
   private int selectX, selectY;
 
@@ -52,7 +52,7 @@ class Fenetre extends JFrame implements ActionListener{
 
     quitter = new JButton("Quitter");
 
-    score = new JTextField("Nb Deplacements : " + nb_dep);
+    score = new JLabel("Nb Deplacements : " + nb_dep);
 
     menu = new JPanel();
     menu.setLayout(new GridLayout(8,1));
